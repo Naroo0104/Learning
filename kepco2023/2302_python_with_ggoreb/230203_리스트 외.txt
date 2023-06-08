@@ -1,0 +1,397 @@
+>print
+print("입력한 섭씨온도:", celcius)
+print("변환된 화씨온도:",fahrenheit)
+
+print(f"입력한 섭씨온도:{celcius}")
+print(f"변환된 화씨온도:{fahrenheit}")
+
+위와 아래가 같다.
+
+
+print("I eat %d apples" % 3)
+print("I eat %s apples" % "five")
+no=3
+print("I eat %d apples" % no)
+print("I eat %0.2f apples" % 1.456465)
+print("%10s" % "hi")  #공백주기
+결과:
+          hi
+
+
+print("%-10sjane" % "hi")  #공백주기(역)
+
+결과:
+hi         jane
+
+
+print("%4s" % "성적표")
+
+과제
+
+1.
+장진영
+김연화
+정수혁
+이남호
+이상훈
+
+2.
+print("학생들의 파이썬 점수를 김연화, 이상훈, 이현수, 정수혁, 한지훈 순으로 입력하시오:")
+user_input1=float(input())
+user_input2=float(input())
+user_input3=float(input())
+user_input4=float(input())
+user_input5=float(input())
+
+kr_sc=[85, 90, 65, 70, 45]
+en_sc=[45, 85, 90, 65, 70]
+mt_sc=[70, 45, 85, 90, 65]
+py_sc=[user_input1, user_input2, user_input3, user_input4, user_input5]
+
+k=print(kr_sc)
+e=print(en_sc)
+m=print(mt_sc)
+p=print(py_sc)
+
+print("국어",kr_sc, sum(kr_sc)/4)
+print("영어",en_sc, sum(en_sc)/4)
+print("수학",mt_sc, sum(mt_sc)/4)
+print("파이썬",py_sc,sum(py_sc)/4)
+print("평균", sum(kr_sc)/4,sum(en_sc)/4,sum(mt_sc)/4,sum(py_sc)/4)
+
+
+avg_sbj=[sum(kr_sc)/4,sum(en_sc)/4,sum(mt_sc)/4,sum(py_sc)/4]
+print(avg_sc)
+
+kyh_sc=[kr_sc[0],en_sc[0],mt_sc[0],py_sc[0]]
+lsh_sc=[kr_sc[1],en_sc[1],mt_sc[1],py_sc[1]]
+lhs_sc=[kr_sc[2],en_sc[2],mt_sc[2],py_sc[2]]
+jsh_sc=[kr_sc[3],en_sc[3],mt_sc[3],py_sc[3]]
+hjh_sc=[kr_sc[4],en_sc[4],mt_sc[4],py_sc[4]]
+
+avg_std=[sum(kyh_sc)/4,sum(lsh_sc)/4,sum(lhs_sc)/4,sum(jsh_sc)/4, sum(hjh_sc)/4]
+print(avg_sc2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+avg1=['      ','국어', '영어', '수학', '파이썬', '평균]
+std1=['김연화', kr_sc[0], en_sc[0], mt_sc[0], py_sc[0], avg_sc2[0]]
+std2=['이상훈', kr_sc[1],en_sc[1],mt_sc[1],py_sc[1], avg_sc2[1]]
+std3=['이현수', kr_sc[2],en_sc[2],mt_sc[2],py_sc[2], avg_sc2[2]]
+std4=['정수혁', kr_sc[3],en_sc[3],mt_sc[3],py_sc[3], avg_sc2[3]]
+std5=['한지훈', kr_sc[4],en_sc[4],mt_sc[4],py_sc[4], avg_sc2[4]]
+avg2=[avg_sc2[0],avg_sc2[1],avg_sc2[2],avg_sc2[3]]
+
+
+print(avg1)
+print(std1)
+print(std2)
+print(std3)
+print(std4)
+print(std5)
+print(avg2)
+
+print("김연화 학생의 국어점수를 입력하세요:")
+user_input1=int(input())
+
+
+
+
+'
+4. 과제등록 in 카페
+
+﻿
+0. 개념
+
+
+print(), input(): 입출력
+
+
+int(), float(): 정수형, 실수형
+
+
+round(숫자, 반올림 자릿수): 반올림
+
+
+sum(), /: 합, 나누기->평균
+
+
+변수설정
+
+
+패킹, 언패킹: 리스트 변수설정, 리스트 내 값 변수 반환
+
+
++
+
+
+print("""
+
+""")
+
+: 문자열 줄바꿈
+
+
+
+
+
+1. 코드
+
+
+# 각 학생 파이썬 점수 입력, 평균 계산
+
+
+## 김연화
+
+
+print('학생의 이름을 입력하시오.')
+
+
+user_name1=input()
+
+
+print(user_name1+" 학생의 파이썬 점수를 입력하시오")
+
+
+user_input1=int(input())
+
+
+print(user_input1)
+
+
+print("""
+
+""")
+
+
+
+
+std1_sc=[85,60,75, user_input1]
+
+
+avg_std1=round(float(sum(std1_sc)/4),1)
+
+
+std1_sc.insert(4,avg_std1)
+
+
+kr_sc1, en_sc1, mt_sc1, py__sc1,avg_std1=std1_sc
+
+
+print("""
+
+""")
+
+
+
+##이상훈
+
+
+print('학생의 이름을 입력하시오.')
+
+
+user_name=input()
+
+
+print(user_name+" 학생의 파이썬 점수를 입력하시오")
+
+
+user_input2=int(input())
+
+
+print(user_input2)
+
+
+print("""
+
+""")
+
+
+
+std2_sc=[45, 85, 90, user_input2]
+
+
+avg_std2=round(float(sum(std2_sc)/4),1)
+
+
+std2_sc.insert(4,avg_std2)
+
+
+kr_sc2, en_sc2, mt_sc2, py_sc2,avg_std2=std2_sc
+
+
+
+##이현수
+
+
+print('학생의 이름을 입력하시오.')
+
+
+user_name=input()
+
+
+print(user_name+" 학생의 파이썬 점수를 입력하시오")
+
+
+user_input3=int(input())
+
+
+print(user_input3)
+
+
+print("""
+
+""")
+
+
+
+std3_sc=[70, 45, 85, user_input3]
+
+
+avg_std3=round(float(sum(std3_sc)/4),1)
+
+
+std3_sc.insert(4,avg_std3)
+
+
+kr_sc3, en_sc3, mt_sc3, py_sc3,avg_std3=std3_sc
+
+
+
+##정수혁
+
+
+print('학생의 이름을 입력하시오.')
+
+
+user_name=input()
+
+
+print(user_name+" 학생의 파이썬 점수를 입력하시오")
+
+
+user_input4=int(input())
+
+
+print(user_input4)
+
+
+print("""
+
+""")
+
+
+
+
+std4_sc=[90,70,55, user_input4]
+
+
+avg_std4=round(float(sum(std4_sc)/4),1)
+
+
+std4_sc.insert(4,avg_std4)
+
+
+kr_sc4, en_sc4, mt_sc4, py_sc4,avg_std4=std4_sc
+
+
+
+##한지훈
+
+
+print('학생의 이름을 입력하시오.')
+
+
+user_name=input()
+
+
+print(user_name+" 학생의 파이썬 점수를 입력하시오")
+
+
+user_input5=int(input())
+
+
+print(user_input5)
+
+
+print("""
+
+""")
+
+
+
+std5_sc=[85,50,70, user_input5]
+
+
+avg_std5=round(float(sum(std5_sc)/4),1)
+
+
+std5_sc.insert(4,avg_std5)
+
+
+kr_sc5, en_sc5, mt_sc5, py_sc5,avg_std5=std5_sc
+
+
+
+
+
+#과목 성적 입력, 평균 구하기
+
+
+
+kr_sc=[std1_sc[0], std2_sc[0], std3_sc[0], std4_sc[0], std5_sc[0]]
+
+en_sc=[std1_sc[1], std2_sc[1], std3_sc[1], std4_sc[1], std5_sc[1]]
+
+mt_sc=[std1_sc[2], std2_sc[2], std3_sc[2], std4_sc[2], std5_sc[2]]
+
+py_sc=[std1_sc[3], std2_sc[3], std3_sc[3], std4_sc[3], std5_sc[3]]
+
+
+avg_sbj=[round(float(sum(std1_sc)/4),1), round(float(sum(std2_sc)/4),1), round(float(sum(std3_sc)/4),1), round(float(sum(std3_sc)/4),1)]
+
+
+avg_kr, avg_en, avg_mt, avg_py=avg_sbj
+
+
+
+
+#성적표 출력
+
+
+print(" 성적표 ")
+
+print("--------------------------------------------")
+
+
+print(" ", " 국어 ", " 영어 ", " 수학 ", " 파이썬 ", " 평 균 ")
+
+print(user_name1, " ", kr_sc1, " ", en_sc1, " ", mt_sc1, " ", py__sc1," ", avg_std1)
+
+print(" 이상훈 ", " ", kr_sc2, " ", en_sc2, " ", mt_sc2, " ", py_sc2, " ", avg_std2)
+
+print(" 이현수 ", " ", kr_sc3, " ", en_sc3, " ", mt_sc3, " ", py_sc3, " ", avg_std3)
+
+print(" 정수혁 ", " ", kr_sc4, " ", en_sc4, " ", mt_sc4, " ", py_sc4, " ", avg_std4)
+
+print(" 한지훈 ", " ", kr_sc5, " ", en_sc5, " ", mt_sc5, " ", py_sc5, " ", avg_std5)
+
+print(" 평 균 ", " ", avg_kr, " ", avg_en, " ", avg_mt, " ", avg_py)
+
+
+print("""--------------------------------------------""")
+
+
+
+

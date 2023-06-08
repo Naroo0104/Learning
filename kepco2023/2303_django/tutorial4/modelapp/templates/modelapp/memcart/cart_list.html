@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 회원 및 장바구니(주문) 정보 조회 :::</title>
+    <script type='text/javascript'>
+            function goBack(){
+                location.href="/model/mem_list2/";
+        }
+    </script>
+</head>
+<body>
+    <h3>회원 및 장바구니(주문) 정보 목록</h3>
+    <hr/>
+    <button onclick="goBack()">뒤로 가기</button>
+    <!-- {{cart_query}} -->
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>패스워드</th>
+            <th>이름</th>
+            <th>주소1</th>
+            <th>상품코드</th>
+            <th>주문번호</th>
+            <th>주문수량</th>
+            <th>상품명</th>
+        </tr>
+        {% for data in cart%}
+        <tr>
+            <td>{{ data.member.mem_id }}</td>
+            <td>{{ data.member.mem_pass }}</td>
+            <td>{{ data.member.mem_name }}</td>
+            <td>{{ data.member.mem_add1 }}</td>
+            <td>{{ data.cart_no }}</td>
+            <td>{{ data.prod.prod_id }}</td>
+            <td>{{ data.cart_qty }}</td>    
+            <td>{{ data.prod.prod_name }}</td>                      
+        </tr>
+        {% endfor %}
+        
+
+
+    </table>
+</body>
+</html>

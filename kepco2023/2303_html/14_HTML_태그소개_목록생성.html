@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 14_HTML_태그소개_목록생성 :::</title>
+    <style>
+        /* ul 태그에 스타일 지정 : 표식 정의 */
+        ul {
+            /* 채워진 원 표시 */
+            /* list-style-type: disc; */
+            /* 빈 원 표시 */
+            /* list-style-type: circle; */
+            /* 표식 사용 않기 */
+            /* list-style-type: none; */
+            /* 채워진 사각형 표시 */
+            list-style-type: square;
+        }
+        ul.menu {
+            padding: 0;
+        }
+        /* ul 태그 중에 menu인 클래스의 li 태그 영역을 수평구조로 변경하기(inline) */
+        /* > : 직계 자식, 띄어쓰기 한 칸 : 자손 */
+        ul.menu > li {
+            display: inline;
+        }
+
+        /* ul > li 밑 a 태그에 대해 버튼 형태처럼 디자인하기 */
+        ul.menu li a {
+            background-color: lightblue;
+            color: white;
+            /* 첫째 px: 상하 여백 */
+            /* 둘째 px: 좌우 여백 */
+            padding: 10px 20px;
+            /* 텍스트의 밑줄 지우기 */
+            text-decoration:none;
+            /* 사각형 모서리 라운드 주기 */
+            border-radius: 10px 10px 10px 10px ;
+        }
+    </style>
+</head>
+<body>
+    <!-- 기호 표식을 사용하는 방식 -->
+    <h3>표식을 이용하여 목록 생성</h3>
+    <ul>
+        <li>커피(Coffee)</li>
+            <ul>
+                <li>아메리카노</li>
+                <li>라떼</li>
+            </ul>
+        <li>차(Tea)</li>
+        <li>우유(Milk)</li>
+    </ul>
+
+    <hr/>
+
+    <!-- 순서 목록 생성 -->
+    <h3>번호/알파벳을 이용해 목록 표시</h3>
+    <ol type="I">
+        <li>감자</li>
+        <li>고구마</li>
+        <li>토란</li>
+    </ol>
+
+    <hr/>
+
+    <!-- 제목/설명 목록 형태로 표시 -->
+    <dl>
+        <dt>커피 메뉴</dt>
+        <dd>-아메리카노, 플랫 화이트</dd>
+        <dt>차 메뉴</dt>
+        <dd>-보리차, 녹차</dd>
+    </dl>
+
+    <hr/>
+
+    <!-- 표식기호 목록을 중첩해서 사용 -->
+    <ul>
+        <li>커피
+            <ul>
+                <li>아메리카노</li>
+                <li>라떼</li>
+                <li>카푸치노</li>
+            </ul>
+        </li>
+        <li>차
+            <ul>
+                <li>유자차</li>
+                <li>대추차</li>
+                <li>홍삼차</li>
+            </ul>
+        </li>
+        <li>우유
+            <ul>
+                <li>딸기우유</li>
+                <li>초코우유</li>
+                <li>녹차우유</li>
+            </ul>
+        </li>
+    </ul>
+    <hr/>
+    <!-- 표식 방법을 이용해 카테고리 메뉴 만들기 -->
+    <ul class="menu">
+        <!-- 클래스 쓰는 이유: 특정 태그를 지정하기 위해 고윳값을 생성 -->
+        <li>커피</li>
+        <li>차</li>
+        <li>음료</li>
+        <li>아이스크림</li>
+    </ul>
+    <hr/>
+    <!-- 메뉴 형태처럼 디자인 -->
+    <ul class="menu">
+        <li><a href="./01_html_소개.html">커피</a></li>
+        <li><a href="./02_html_태그소개.html">차</a></li>
+        <li><a href="./03_HTML_태그소개_링크+이미지.html">음료</a></li>
+        <li><a href="./04 _HTML_태그소개_Style.html">아이스크림</a></li>
+    </ul>
+</body>
+</html>

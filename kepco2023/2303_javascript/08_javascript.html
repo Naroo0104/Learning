@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 08_javascript :::</title>
+    <script type="text/javascript">
+        function goClick() {
+            var member = {mem_id:"a001",
+                          mem_pw:"asdf1234",
+                          mem_age : 25,
+                          mem_addr : "광주 광산구"};
+            tag_text = "<table border='1'>";
+            tag_text += "<tr><th>id</th>";
+            tag_text += "<th>pw</th></tr>";
+            tag_text += "<tr><td>"+member.mem_id + "</td>";
+            tag_text += "<td>"+member.mem_id + "</td></tr>";
+            tag_text += "</table>";
+            document.getElementById("p1").innerHTML=tag_text;
+        }
+    </script>
+</head>
+<body>
+    <h3>객체 처리</h3>
+    <p id="p1"></p>
+    <button onclick="goClick()">클릭</button>
+</body>
+</html>

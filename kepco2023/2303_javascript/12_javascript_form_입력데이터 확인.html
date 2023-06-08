@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 12_form_입력데이터 확인 :::</title>
+    <script type="text/javascript">
+        // 회원 아이디 및 비밀번호 입력 확인
+        // 입력 확인 후 전송
+        function goLogin() {
+            var fm=document.getElementById("fm");
+            // 회원 아이디 입력 여부 확인
+            // if(fm.mem_id.value == ""){
+            //     alert("아이디를 입력해주세요");
+            //     //focus():해당 입력 박스로 커서를 이동시킴, for 사용자 편의
+            //     fm.mem_id.focus();
+            //     return;
+            // }
+            // if(fm.mem_pw.value == ""){
+            //     alert("비밀번호를 입력해주세요");
+            //     fm.mem_pw.focus();
+            //     return;
+            // }
+
+            alert(fm.mem_id.value);
+            alert(fm.mem_pw.value);
+
+            //이동할 페이지 정의(요청 페이지)
+            fm.action="./11_javascript.html";
+            //전송요청 처리
+            fm.submit();
+        }
+    </script>
+</head>
+<body>
+    <!-- [form] 태그의 역할
+        - form 태그 영역 안에 있는 name이 있는 입력값(input)들을
+          서버로 전송하는 기능 수행
+        - form 태그 속성: 요청방식, 요청 페이지 등 지정가능 
+        - 요청방식 : method => post와 get방식
+        - 요청 페이지 정의 : action 속성에 정의-->
+    <form name="fm" id="fm" action="./11_javascript.html">
+        아이디 :
+        <input type="text" name="mem_id" id="mem_id"
+                placeholder="아이디를 입력해주세요!"
+                required>
+        <br/>
+        비밀번호 : 
+        <input type="text" name="mem_pw" id="mem_pw"
+                placeholder="비밀번호를 입력해주세요!"
+                required>
+                <hr/>
+                <button onclick="goLogin()">로그인</button>
+                
+                <!-- required를 사용하는 경우 -->
+                <input type="submit" value="로그인(required)">
+    </form>
+</body>
+</html>

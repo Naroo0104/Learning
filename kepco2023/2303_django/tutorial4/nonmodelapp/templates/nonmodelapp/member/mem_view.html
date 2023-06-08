@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: nonmodel로 db 연동 :::</title>
+    <script type="text/javascript">
+        function goBack(){
+            backPage="/nonmodel/mem_list3/"
+            location.href(backPage)
+            //history.go(-1);
+        }
+</script>
+</head>
+<body>
+    <h3>회원 상세정보 조회</h3>
+    <hr/>
+    <button onclick="goBack()">목록으로</button>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>패스워드</th>
+            <th>이름</th>
+            <th>주소1</th>
+        </tr>
+        <tr>
+            <td>{{dict_data.mem_id}}</td>
+            <td>{{dict_data.mem_pass}}</td>
+            <td>{{dict_data.mem_name}}</td>
+            <td>{{dict_data.mem_add1}}</td>
+        </tr>   
+    </table>
+</body>
+</html>

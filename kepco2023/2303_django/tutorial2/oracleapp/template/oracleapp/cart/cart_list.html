@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 장바구니(주문) 정보 목록 :::</title>
+<!--alert("주문상품:"+cart_no+"/"+cart_prod);-->
+    <script type='text/javascript'>
+        <!-- 상세보기로 가기 -->
+        function goView(cart_no, cart_prod){
+            url="/oracle/cart_view/?";
+            url=url+"cart_no="+cart_no+"&";
+            url=url+"cart_prod="+cart_prod;
+            location.href=url;
+        }       
+    </script>
+</head>
+<body>
+    <h3>장바구니(주문) 정보 목록</h3>
+    <hr/>
+    <!-- {{cart_list}} -->
+    <table border="1">
+        <tr>
+            <th>주문번호</th>
+            <th>회원 아이디</th>
+            <th>상품코드</th>
+            <th>주문수량</th>
+        </tr>
+        {% for cart in cart_list %}
+        <tr>
+            <td>
+                <a href="javascript:goView('{{cart.cart_no}}', '{{cart.cart_prod}}')">{{cart.cart_no}}</a>
+            </td>
+            <td>{{cart.cart_member}}</td>
+            <td>{{cart.cart_prod}}</td>
+            <td>{{cart.cart_qty}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

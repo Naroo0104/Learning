@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 09_javascript :::</title>
+    <script type="text/javascript">
+        function goLength() {
+            var v = "abcd efg hijk";
+            var size = v.length;
+            document.getElementById("p1").innerHTML=size;
+        }
+
+        //문자열 찾기
+        function goIndexOf(){
+            var p1_str = 
+                document.getElementById("p1").innerHTML;
+            // alert(p1_str);
+            // 특정 문자의 위치 찾기 : 시작 위치
+            // 0부터 시작
+            var idx = p1_str.indexOf("locate");
+            document.getElementById("p2").innerHTML=idx;
+        }
+
+        function golastIndexOf() {
+            var p1_str = 
+                document.getElementById("p1").innerHTML;
+            var idx = p1_str.lastIndexOf("locate");
+            document.getElementById("p2").innerHTML=idx;
+        }
+    </script>
+</head>
+<body>
+    <h3>문자열 관련 함수 속성들</h3>
+    <p id="p1">Please, locate where 'locate'</p>
+    <p id="p2">찾은 문자열의 위치값 출력</p>
+    <button onclick="goLength()">문자열 길이 확인하기</button>
+    <button onclick="goIndexOf()">문자열 찾기</button>
+    <button onclick="golastIndexOf()">문자열 마지막 위치 찾기</button>
+</body>
+</html>

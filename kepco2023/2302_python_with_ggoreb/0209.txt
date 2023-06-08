@@ -1,0 +1,584 @@
+# student_list = [['연화', '남호', '민지', '상훈', '소연'],
+#                 ['수민', '수성', '영호', '재현', '준영'],
+#                 ['창훈', '태진', '현수', '세원', '진영']]
+#
+# for students in student_list:
+#     for student in students:
+#         print(student)
+
+
+# kor_score = [49, 70, 20, 100, 80]
+# math_score = [43, 59, 85, 30, 90]
+# eng_score = [49, 79, 48, 60, 100]
+# midterm_score = [kor_score, math_score, eng_score]
+# student_sum_score = [0, 0, 0, 0, 0]
+
+#1,l
+#0,o,O
+
+# for scores in midterm_score:
+#     i = 0
+#     for score in scores:
+#         student_sum_score[i] += score
+# i += 1
+#
+# print(student_sum_score)
+# a, b, c, d, e = student_sum_score
+#
+# student_avg_score = [0, 0, 0, 0, 0]
+#
+# for score in student_sum_score:
+#     student_avg_score = score / 3
+#
+# print(student_avg_score)
+
+
+# for i in range(1, 5):
+#     for j in range(0, i):
+#         print("*", end='' )
+#     print()
+
+
+# for i in range(10, 0, -1):
+#     for j in range(0, i):
+#         print("*", end='' )
+#     print()
+
+# def Add(num1, num2):
+#     result = num1 * num2
+#     return result
+#
+# def calculate_rectangle(x, y):
+#     return x * y
+#
+# def printFactorListofList(listOfList):
+#     for collection in listOfList:
+#         for factor in collection:
+#             print(factor)
+
+# rectangle_x = 10
+# rectangle_y = 20
+#
+# print(f"사각형 x의 길이:{rectangle_x}")
+# print(f"사각형 y의 길이:{rectangle_y}")
+#
+# result = calculate_rectangle(rectangle_x, rectangle_y)
+# print(f"사각형의 넓이는 {result} 입니다.")
+# student_list = [['연화', '남호', '민지', '상훈', '소연'],
+#                 ['수민', '수성', '영호', '재현', '준영'],
+#                 ['창훈', '태진', '현수', '세원', '진영']]
+#
+# for students in student_list:
+#     for student in students:
+#         print(student)
+
+
+# kor_score = [49, 70, 20, 100, 80]
+# math_score = [43, 59, 85, 30, 90]
+# eng_score = [49, 79, 48, 60, 100]
+# midterm_score = [kor_score, math_score, eng_score]
+# student_sum_score = [0, 0, 0, 0, 0]
+
+#1,l
+#0,o,O
+
+# for scores in midterm_score:
+#     i = 0
+#     for score in scores:
+#         student_sum_score[i] += score
+# i += 1
+#
+# print(student_sum_score)
+# a, b, c, d, e = student_sum_score
+#
+# student_avg_score = [0, 0, 0, 0, 0]
+#
+# for score in student_sum_score:
+#     student_avg_score = score / 3
+#
+# print(student_avg_score)
+
+
+# for i in range(1, 5):
+#     for j in range(0, i):
+#         print("*", end='' )
+#     print()
+
+
+# for i in range(10, 0, -1):
+#     for j in range(0, i):
+#         print("*", end='' )
+#     print()
+
+# def Add(num1, num2):
+#     result = num1 * num2
+#     return result
+#
+# def calculate_rectangle(x, y):
+#     return x * y
+#
+# def printFactorListofList(listOfList):
+#     for collection in listOfList:
+#         for factor in collection:
+#             print(factor)
+
+# student_list = [['연화', '남호', '민지', '상훈', '소연'],
+#                 ['수민', '수성', '영호', '재현', '준영'],
+#                 ['창훈', '태진', '현수', '세원', '진영']]
+#
+# numberList = [[1, 2, 3, 4, 5],
+#               [6, 7, 8, 9, 10],
+#               [11, 12, 13, 14, 15]]
+#
+# printFactorListofList(student_list)
+# printFactorListofList(numberList)
+
+# def sumList(collection):
+#     result = 0
+#     for i in collection:
+#         if type(i) is not int:
+#             return print("숫자가 아닌 요소가 있습니다.")
+#         result += i
+#     else:
+#         return result
+#
+# def avgList(collection):
+#     return sumList(collection) / len(collection)
+#
+# def sumList(collection):
+#     result = 0
+#     for i in collection:
+#         if type(i) is not int:
+#             return print("숫자가 아닌 요소가 있습니다.")
+#         result += i
+#     else:
+#         # collection.clear() 이러지 마시오...
+#         return result
+#
+# kor_score = [49, 70, 20, 100, 80]
+# math_score = [43, 59, 85, 30, 90]
+# eng_score = [49, 79, 48, 60, 100]
+# midterm_score = [kor_score, math_score, eng_score]
+# student_sum_score = [0, 0, 0, 0, 0]
+#
+# print(sumList(kor_score))
+# print(kor_score)
+# print(avgList(kor_score))
+
+
+# def f(x):
+#     y = x #3
+#     x = 5
+#     return y * y
+# # Y가 X를 가리키고 그러므로 중간에 x 값을 변경하면 y값도 변경되나?
+# # 결론은 그렇지 않다. 값이 저장될 뿐이다.
+#
+# def spam(eggs):
+#     eggs.append(1)
+#     eggs = [2, 3]
+
+
+# x = 3
+# print(f(x))
+# print(x)
+
+# ham = [0]
+# spam(ham)
+# print(ham)
+
+# def test(t):
+#     print(x)
+#     t = 20
+#     print(f"In function:{t}")
+#
+# def f():
+#     global s
+#     s = "I love London"
+#     print(s)
+
+# def globlasSum():
+#     global num
+#     num += 1
+#     print(num)
+#
+# num = 0
+# globlasSum()
+# globlasSum()
+# globlasSum()
+
+# def calculate(x, y):
+#     total = x + y
+#     print("In_function")
+#     print(f"a:{a}, b:{b}, a + b: {a + b}, total: {total}")
+#     return total
+#
+# a = 5
+# b = 7
+# total = 0
+#
+# print("In Program - 1")
+# print(f"a:{a}, b:{b}, a + b: {a + b}")
+#
+# sum = calculate(a, b)
+#
+# print("After Calculate")
+# print(f"Total:{total}, Sum:{sum}")
+
+# def factorial(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)
+#
+# userInput = input("Input Number for Factorial Calculation: ")
+# result = factorial(int(userInput))
+# print(f"result: {result}")
+
+# def print_something(my_name, your_name):
+#     print(f"Hello {your_name}, my name is {my_name}")
+
+# print_something("honggeol", "sooyeon")
+# print_something(your_name="sooyeon", my_name="honggeol")
+
+
+# def print_something2(my_name, your_name="TeamLab"):
+#     print(f"Hello {your_name}, my name is {my_name}")
+
+# print_something2("Sungchul", "min")
+# print_something2("Sungchul")
+
+# def asterisk_test(a, b, *args):
+#     print(type(args))
+#     print(args)
+#     return a + b + sum(args)
+
+# print(asterisk_test(1, 2, 3, 4, 5))
+
+# print(ord('a'))
+# chr()
+
+# data = "Hellow World!"
+#
+# f = open("newFile", 'w')
+# f.write(data)
+# f.close()
+
+# f = open("Dynamite.txt", 'r')
+# yesterday_lyric = f.readlines()
+# f.close()
+#
+# contents = ""
+#
+# for line in yesterday_lyric:
+#     contents = contents + line.strip() + "\n"
+#
+# n_of_yesterday = contents.upper().count("DYNAMITE")
+# print(n_of_yesterday)
+
+# print(chr(ord('a') - 32))
+# print(ord('A'))
+# chr()
+
+# def userUpperLower(list_string, opt = 'U'):
+#     contents = ""
+#     optNum = 0
+#     if opt == 'U':
+#         optNum = - 32
+#     elif opt == 'L':
+#         optNum = 32
+#
+#     for char in list_string:
+#         contents += chr(ord(char) + optNum)
+#     else:
+#         return contents
+#
+#
+#
+# result = userUpperLower("abcdefghogk",'U')
+# print(result)
+
+# create_dic = {}
+# country_code = {"America": 1, "korea": 82, "China": 86, "Japan": 81}
+# print(country_code['America']) #지정한 key로 value 호출
+# country_code['German'] = 49 #새로 추가 할때
+# print(country_code.keys()) # key들만 보고 싶을 때
+# print(country_code.items())# item들만 보고 싶을 때
+# dict_a = {}
+# f = open("kimBapMenu2.txt", 'r')
+# KimBapHell_menu = f.readlines()
+# f.close()
+#
+# contents = ""
+#
+# for line in KimBapHell_menu:
+#     # contents = contents + line.strip() + "\n"
+#     data = line.strip().split(' ')
+#     dict_a[data[0]] = data[1]
+
+
+#
+# print(dict_a)
+
+# word = "abcdef"
+# word_list = list(word)
+# print(word_list)
+#
+# result = []
+# # for _ in range(len(word_list)):
+# #     result.append(word_list.pop())
+#
+# i = len(word_list) - 1
+# for _ in word_list:
+#     print(i)
+#     print(word_list[i])
+#     result.append(word_list[i])
+#     i -= 1
+#
+# print(result)
+#
+# word = "abcdef"
+# word_list = list(word)
+#
+# i = len(word_list)    #6글자
+# j = len(word_list) -1 #5번
+#
+# while 0 < i:
+#     result.append(word_list[j])
+#     j -= 1
+#     i -= 1
+#
+# print(result)
+# print(word[::-1])
+
+
+# s = set([1, 2, 3, 1, 2, 3])
+# print(s)
+#
+# s.add(1)
+# print(s)
+# s.remove(1)
+# print(s)
+#
+# s.update([1, 4, 5, 6, 7])
+# print(s)
+#
+# s.discard(1)
+# print(s)
+#
+# s.clear()
+# print(s)
+#
+# s1 = set([1, 2, 3, 4, 5])
+# s2 = set([3, 4, 5, 6, 7])
+#
+# s3 = s1.union(s2)
+# print(s3)
+#
+# s3 = s1 | s2 #합집합
+# print(s3)
+#
+# s3 = s1 & s2 #교집합
+#
+# print(s3)
+#
+# s3 = s1 - s2 #차집합
+# print(s3)
+
+# from collections import Counter
+
+# text = list("gallahad")
+# print(text)
+# c = Counter(text)
+# print(c)
+
+from collections import Counter
+# f = open("Dynamite.txt", 'r')
+# yesterday_lyric = f.readlines()
+# f.close()
+
+# contents = ""
+
+# for line in yesterday_lyric:
+#     contents = contents + line.strip() + "\n"
+
+# for line in yesterday_lyric:
+#     contents = contents + line
+#
+#
+# n_of_lyrics = contents.lower().split()
+# print(Counter(n_of_lyrics))
+
+
+# example = "python,jquery,javascript"
+# data = example.split(',')
+# print(data)
+# example = "python jquery javascript"
+# data = example.split(' ')
+# print(data)
+# example = "010-6300-5739"
+# data = example.split('-')
+# print(data)
+#
+# color = ['red', 'blue', 'green', 'yellow']
+# result = "".join(color)
+# print(result)
+
+# result = [i for i in range(1, 10) if i % 2 == 0]
+# print(result)
+#
+# result = [i if i % 2 == 0 else 10 for i in range(10)]
+# print(result)
+# result = []
+# for i in range(0, 10):
+#     if i % 2 == 0:
+#         result.append(i)
+#     else:
+#         result.append(10)
+#
+# print(result)
+#
+# word_1 = "Hello"
+# word_2 = "World"
+#
+# result = [i + j for i in word_1 for j in word_2]
+# print(result)
+#
+# result = []
+# for i in word_1:
+#     for j in word_2:
+#         result.append(i+j)
+
+# print(result)
+# pangram = "the quick brown fox jumps over the lazy dog"
+# data = pangram.split()
+#
+# result = [ord(i) for word in data for i in word]
+# for word in data:
+#     for i in word:
+#      result.append(ord(i))
+
+# print(result)
+# result = set(result)
+# print(result)
+#
+# alpha = [chr(i) for i in result]
+# for i in result:
+#     alpha.append(chr(i))
+# print(alpha)
+
+# f = open("Dynamite.txt", 'r')
+# yesterday_lyric = f.readlines()
+# f.close()
+#
+# contents = ""
+# for line in yesterday_lyric:
+#     contents = contents + line.strip() + "\n"
+#
+#
+# n_of_lyrics = contents.lower().split()
+# print(n_of_lyrics)
+#
+# ord_lyrics = []
+# for word in n_of_lyrics:
+#     for i in word:
+#         ord_lyrics.append(str(ord(i)))
+#     ord_lyrics.append(" ")
+#
+# print(ord_lyrics)
+# result = ' '.join(s for s in ord_lyrics)
+# result = [ord(i) for word in n_of_lyrics for i in word]
+# f = open("newFile", 'w')
+# f.write(result)
+# f.close()
+
+# f = lambda x, y: x + y
+# print(f(1, 4))
+#
+# print((lambda x: x + 1)(5))
+#
+# f = lambda x: x ** 2
+# print(f(3))
+#
+#
+# f = lambda x: x / 2
+# print(f(3))
+
+
+# from SoccerPlayer import SoccerPlayer
+#
+#
+# player_01 = SoccerPlayer("Jinhyun", "MF", 10)
+# player_02 = SoccerPlayer("hyunJin", "CF", 25)
+# print(f"현재 선수1의 등번호는 {player_01.back_number}")
+# print(f"현재 선수2의 등번호는 {player_02.back_number}")
+# player_01.change_back_number(21)
+# print(f"현재 선수1의 등번호는 {player_01.back_number}")
+# print(f"현재 선수2의 등번호는 {player_02.back_number}")
+# print(player_01)
+# print(player_02)
+#
+#
+#
+#
+#
+#
+# player_03 = SoccerPlayer("minJae", "CB", 40)
+# print(player_03)
+
+# from NoteBook import Note
+# from NoteBook import NoteBook
+#
+# good_sentence1 = "백견이 불여일타, 백번 눈으로 보는 것보다 한번 치는 것이 낫다"
+# good_sentence2 = "납기는 생명이고 퀄리티는 자존심이다."
+# good_sentence3 = "보통 컴퓨터는 잘못이 없다. 내 손가락이 문제다."
+#
+# note_1 = Note(good_sentence1)
+# note_2 = Note(good_sentence2)
+# note_3 = Note(good_sentence3)
+#
+#
+# print(note_1)
+#
+# myNotebook = NoteBook("명언노트")
+#
+# myNotebook.add_note(note_1)
+# myNotebook.add_note(note_2)
+# myNotebook.add_note(note_3)
+
+# print(myNotebook.get_number_of_pages())
+# print(myNotebook.get_number_of_all_characters())
+
+
+from Person import Person
+# from Person import Employee
+#
+# chunsik = Employee("춘식이",25,"남자",10000,"2023-02-09")
+#
+# print(chunsik.about_me())
+# print(chunsik.do_work())
+
+import cx_Oracle
+from Customer import Customer
+
+#오라클 DB에 사용자 연결!
+con = cx_Oracle.connect("madang", "madang", "127.0.0.1:1521", encoding="UTF-8")
+
+cursor = con.cursor()
+cursor.execute("select * from customer")
+# out_data = cursor.fetchone()
+out_data = cursor.fetchall()
+con.close()
+
+customers = [Customer(row[0], row[1], row[2], row[3]) for row in out_data]
+
+# for row in out_data:
+#     customers.append(Customer(row[0], row[1], row[2], row[3]))
+
+#custmers List에서 custmomer 객체를 불러와서 함수 실행!
+for customer in customers:
+    if type(customer) == Customer:
+        customer.introduce()
+
+
+
+# print(out_data)

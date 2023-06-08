@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 로그인 확인 :::</title>
+    <script type="text/javascript">
+        function goLogout(){
+            location.href='/nonmodel/logout_session/'
+        }
+    </script>
+</head>
+<body>
+    <h3>로그인 확인</h3>
+    <hr/>
+    로그인 성공 여부 : {{ rs }}
+    <hr/>
+    세션에 저장된 id : {{request.session.ses_mem_id}}
+    <br/>
+    세션에 저장된 이름 : {{request.session.ses_mem_name}}
+    <hr/>
+    <button onclick="goLogout()">로그아웃</button>
+</body>
+</html>

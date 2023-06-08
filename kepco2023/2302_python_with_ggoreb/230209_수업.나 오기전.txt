@@ -1,0 +1,90 @@
+# # 예제 10-4 356p
+# class Person(object):
+#     def __init__(self, name, age, gender):    #init인지 int인지 잘보기!!! ;ㅅ;
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+#
+#     def about_me(self):
+#         print("저의 이름은", self.name, "이고요, 제 나이는", str(self.age), "살입니다")
+#
+#     # def __str__(self):
+#     #     return f"{self.name, self.age}"
+#
+# class Employee(Person):
+#     def __init__(self, name, age, gender, salary, hire_date):
+#         super().__init__(name, age, gender)
+#         self.salary = salary
+#         self.hire_date = hire_date
+#
+#     def do_work(self):
+#         print("열심히 일을 한다")
+#
+#     def about_me(self):
+#         super().about_me()
+#         print(f"제 급여는 {self.salary} 원이고, 제 입사일은 {self.hire_date}입니다.")
+#
+#
+# chunsik = Employee("춘식이",25, "남자",10000, "2023-02-09")
+#
+# print(chunsik.about_me())   #이미 위에서 프린트 할꺼다 라고 지정을 해 놨기 때문에 아래에선 프린트안으로 넣으면 none이 뜬다
+# chunsik.about_me()
+# chunsik.do_work()
+
+# # 10-7 359p
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def talk(self):
+#         raise NotImplementedError("Subclass mist implement abstract method")    #raise 혼자 쓴다면 에러가 발생한다 무조건 상속행!
+#
+# class Cat(Animal):
+#     def talk(self):
+#         return 'Meow!'
+#
+# class Dog(Animal):
+#     def talk(self):
+#         return 'Woof! Woof!'
+#
+# animals = [Cat('Missy'), Cat('Mr.mistoffelees'), Dog('Lassie')]
+# for animal in animals:
+#     # print(animal.name + ':' + animal.talk())
+#     if type(animal) is Dog:
+#         print(f"{animal.name} {animal.talk()}")
+
+# #10-8 361p
+class Product(object):
+    pass
+
+# class Inventory(object):
+#     def __init__(self):
+#         self.__items = []
+#     def add_new_item(self, product):
+#         if type(product) == Product:
+#             self.__items.append(product)
+#             print("new item added")
+#
+#         else:
+#             raise ValueError("Invalid Item")
+#     def get_number_of_items(self):
+#         return len(self.__items)
+#
+# my_inventory = Inventory()
+# my_inventory.add_new_item(Product())
+# my_inventory.add_new_item(Product())
+#
+# my_inventory.__items
+
+#10-9
+class Inventory(object):
+    def __init__(self):
+        self.__items = []
+
+    @property     #숨긴 변수를 사용할수있게 해주는거
+    def items(self):
+        return self.__items
+
+my_inventory =Inventory()
+items = my_inventory.items
+items.append(Product())

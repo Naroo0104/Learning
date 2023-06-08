@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 장바구니(주문) 글쓰기 :::</title>
+    <script type="text/javascript">
+        function goBack(){
+            history.go(-1)
+        }
+
+        //글 쓰기 저장
+        function goInsert(){
+            alert("gogo");
+
+            fm=document.getElementById("fm");
+            fm.action="/oracle/cart_insert/";
+            fm.submit();
+        }
+    </script>
+</head>
+<body>
+<form name="fm" id="fm" method="post" action="#">
+    {% csrf_token %}
+    <h3>장바구니(주문) 글쓰기</h3>
+    <hr/>
+    주문번호 : <input type="text" name="cart_no" 
+                    value="2023032000001"><br/>
+    회원아이디 : <input type="text" name="cart_mem" 
+                    value="a01"><br/>
+    상품코드 : <input type="text" name="cart_prod" 
+                    value="P101000006"><br/>
+    주문수량 : <input type="text" name="cart_qty" 
+                    value="">
+    <hr/>
+    <input type="button" value="저장" onclick="goInsert()">
+    <input type="button" value="뒤로 가기" onclick="goBack()">
+</form> 
+</body>
+</html>

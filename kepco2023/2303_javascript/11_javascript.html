@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 11_javascript :::</title>
+    <script type="text/javascript">
+        function goReplace() {
+            var p1=document.getElementById("p1");
+            var p1_str=p1.innerHTML;
+            var p1_change=p1_str.replace("자바 스크립트", "파이썬");
+            p1.innerHTML = p1_change;
+        }
+        //구분자를 이용해 배열로 만들기
+        function goSplit() {
+            var str="a b c d e f";
+            var str_array = str.split(' ');
+            var p1 = document.getElementById("p1");
+            p1.innerHTML = str_array[1];
+        }
+        //화면 초기화(새로고침)
+        function goReload() {
+            // history.go(-1); 
+            //history: 몇 번 움직였는지 다 체크하고 있기 때문에 바로 전으로 돌아가는 건 -1
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    <h3>문자 치환 함수</h3>
+    <p id="p1">안녕하세요, 자바 스크립트입니다~</p>
+    <button onclick="goReplace()">치환하기</button>
+    <button onclick="goSplit()">구분하기</button>
+    <button onclick="goReload()">화면 초기화</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: nonmodel로 db 연동 :::</title>
+    <script type="text/javascript">
+        function goView(mem_id){
+                url = "/nonmodel/mem_view/?";
+                url = url + "mem_id="+mem_id;
+                location.href = url; 
+            }
+    </script>
+</head>
+<body>
+    <h3>테이블 만들기</h3>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>패스워드</th>
+            <th>이름</th>
+            <th>주소1</th>
+        </tr>
+        {% for mem in mem_list %}
+            <tr>
+                <td>
+                    <a href="javascript:goView('{{mem.0}}')">{{mem.0}}</a>
+                    </td>
+                
+                <td>{{mem.1}}</td>
+                <td>{{mem.2}}</td>
+                <td>{{mem.3}}</td>
+            </tr>   
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 10_javascript :::</title>
+    <script type="text/javascript">
+        // 문자열의 특정 위치의 문자 추출
+        function goSlice() {
+            var str="Apple, Banana, Kiwi";
+            var cut_str=str.slice(7,13);
+            var p1=document.getElementById("p1");
+            p1.innerHTML=cut_str;
+        }
+        function goSubstring() {
+            var str="Apple, Banana, Kiwi";
+            // substring(start,end)
+            var cut_str=str.substring(14,18);
+            var p1=document.getElementById("p1");
+            p1.innerHTML=cut_str;
+            // return: 
+        }
+        function goSubstr() {
+            var str="Apple, Banana, Kiwi";
+            // substr(start, length)
+            var cut_str=str.substr(0,5);
+            var p1=document.getElementById("p1");
+            p1.innerHTML=cut_str;
+            //return: Apple
+        }
+    </script>
+</head>
+<body>
+    <h3>문자열 함수</h3>
+    <p id="p1"></p>
+    <button onclick="goSlice()">클릭</button>
+    <button onclick="goSubstring()">클릭</button>
+    <button onclick="goSubstr()">클릭</button>
+</body>
+</html>

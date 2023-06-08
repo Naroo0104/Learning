@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 로그인 폼 :::</title>
+    <script type="text/javascript">
+        function goLogin(){
+            fm = document.getElementById("fm");
+            fm.action = "/nonmodel/login_session2/"
+            fm.submit();
+        }
+    </script>
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <hr/>
+    <form name="fm" id="fm" method="post" action="#">
+        {% csrf_token %}
+        아이디 : 
+        <input type="text" name="mem_id">
+        <br/>
+        패스워드 :
+        <input type="password" name="mem_pass">
+        <hr/>
+        <button onclick="goLogin()">로그인</button>
+    </form>
+</body>
+</html>

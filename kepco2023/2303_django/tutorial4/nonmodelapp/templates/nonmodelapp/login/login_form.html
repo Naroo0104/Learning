@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 로그인 폼 :::</title>
+    <script type="text/javascript">
+        function goLoginSession(){
+            //alert("gogo");
+            fm=document.getElementById("fm");
+            fm.action="/nonmodel/login_session/";
+            fm.submit();
+        }
+    </script>
+</head>
+<body>  
+<form name="fm" id="fm" method="post" action="#">
+    {% csrf_token %}
+    <h3>로그인 폼</h3>
+    <hr/>
+    <label>id: </label>
+    <input type="text" name="mem_id" id="mem_id">
+    <br/>
+    <label>pw: </label>
+    <input type="text" name="mem_pw" id="mem_pw">
+    <br/>
+    <hr/>
+    <button type="submit" onclick="goLoginSession()">로그인</button>
+    
+</form>
+</body>
+</html>

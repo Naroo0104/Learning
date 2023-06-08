@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: nonmodel의 db 연동2:cart 테이블 :::</title>
+</head>
+<body>
+    <h3>cart 테이블 만들기</h3>
+    <table border="1">
+        <tr>
+            <th>회원 아이디</th>
+            <th>주문번호</th>
+            <th>상품코드</th>
+            <th>상품수량</th>
+        </tr>
+        {% for cart in cart_list %}
+        <tr>
+            {% for i in cart.values %}
+                <td>{{i}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

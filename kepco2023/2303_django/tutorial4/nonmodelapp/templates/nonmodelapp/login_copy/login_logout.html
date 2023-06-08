@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 로그인 & 로그아웃 :::</title>
+    <script type="text/javascript">
+        function goLogin(){
+            fm=document.getElementById("fm");
+            fm.action="/nonmodel/login/";
+            fm.submit();
+        }
+
+        function goLogout(){
+            location.href="/nonmodel/logout/"
+        }
+    </script>
+</head>
+<body>
+    {% if request.session.ses_mem_id == None %}
+        <h3>로그인/로그아웃</h3>
+        <hr/>
+        <form name="fm" id="fm" action="#" method="post" >
+            {% csrf_token %}
+            아이디 : 
+            <input type="text" name="mem_id">
+            <br/>
+            패스워드 :
+            <input type="password" name="mem_pass">
+            <hr/>
+            <button onclick="goLogin()">로그인</button>
+        </form>
+            
+    {% else %}
+        <h3>로그인 확인</h3>
+        <hr/>
+        로그인 성공 여부 : {{ rs }}
+        <hr/>
+        세션에 저장된 id : {{request.session.ses_mem_id}}
+        <br/>
+        세션에 저장된 이름 : {{request.session.ses_mem_name}}
+        <hr/>
+        <button onclick="goLogout()">로그아웃</button>
+
+    {% endif %}
+</body>
+</html>

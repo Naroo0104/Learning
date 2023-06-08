@@ -1,0 +1,23 @@
+>visual studio로 python 구동
+
+mkdir workspace
+입력
+workspace라는 폴더가 user\admin에 생김
+
+code
+입력
+visual studio code 창 열림
+
+python install
+한 뒤
+
+print("hello python")
+치고 
+저장한다.
+
+여기서 생긴 문제
+python: can't open file 'C:\\Users\\admin\\hello.py': [Errno 2] No such file or directory
+
+
+원인: 저장경로가 달라서
+해결책: 저장경로를 주소에 맞게 써주면 됨.

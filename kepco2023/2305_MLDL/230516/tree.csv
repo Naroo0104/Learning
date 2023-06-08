@@ -1,0 +1,11 @@
+,no_insects,no_dead,no_wilting,no_diseases,tree_health
+0,True,True,True,True,Good
+1,True,True,True,True,Good
+2,True,False,True,False,Poor
+3,False,True,True,True,Good
+4,True,True,True,True,Good
+5,True,True,True,True,Good
+6,True,False,False,False,Poor
+7,True,False,True,False,Poor
+8,True,True,True,True,Good
+9,False,False,True,True,Poor

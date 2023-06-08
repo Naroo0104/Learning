@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 장바구니(주문) 상세페이지 :::</title>
+    <script type="text/javascript">
+        function goBack(){
+            //alert("gogo");
+            history.go(-1);
+            //location.href="/oracle/cart_list/";
+        }
+
+        function goUpdate(){
+            //alert("업데이트~~!")
+            //alert("수량 수정 : "+cart_qty.value);
+            
+
+            //post 방식으로 url 전송하기 위해선
+            //form 태그 정보 불러들이기
+            fm=document.getElementById("fm");
+            //form 태그 안에 있는 name=value를 모두
+            //아래 url로 넘기기
+            //action은 무조건 앞뒤에 '/'!!!!
+            fm.action="/oracle/cart_update/";
+            //전송 시키기
+            fm.submit();
+            //alert(fm.cart_no.value);
+            //alert(fm.cart_prod.value);
+            //alert(fm.cart_qty.value);
+        }
+    </script>
+</head>
+<body>
+<!-- 
+    [post] 방식으로 값 전달하는 방법
+    -form 태그 영역 안에 있는 태그 중 
+    -name 속성을 가지는 모든 값들이 전달됨
+    -비밀스럽게
+ -->
+<form name="fm" id="fm" method="post" action="#"> 
+    <!-- hidden(숨기기) type으로 정의 -->
+    <!-- hidden type은 화면에 보이지 않게 값을 정의 -->
+    <input type="hidden" name="cart_no" value="{{cart_no}}">
+    <input type="hidden" name="cart_prod" value="{{cart_prod}}">
+    {% csrf_token %}
+    <h3>장바구니(주문) 수정 페이지</h3>
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>주문번호</th>
+            <th>상품코드</th>
+            <th>주문수량</th>
+        </tr>
+        <tr>
+            <td>{{cart_no}}</td>
+            <td>{{cart_prod}}</td>
+            <td>
+                <input type="text" id="cart_qty" 
+                        name="cart_qty" value="{{cart.cart_qty}}"
+                        size="5">
+            </td>
+        </tr>
+    </table>
+    <hr/>
+    <input type="button" onclick="goUpdate()" value="수정">
+    <button onclick="history.go(-1)">취소</button>
+    <input type="button" onclick="goBack()" value="취소">
+</form>
+</body>
+</html>

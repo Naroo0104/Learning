@@ -1,0 +1,15 @@
+출처
+https://seolin.tistory.com/135
+
+개발자 취직에 도움이 되는 자격증이 있나요?
+결론부터 말씀드리자면 "없습니다"입니다. 제 개인적인 생각으로는, 어떤 자격증을 따더라도 개발자로 취직하는 데 도움이 되지 않습니다. 정보처리기사가 있긴 합니다만, "있으면 좋고, 없으면 없는 대로 그만" 정도의 위상입니다. (직장이 SI 기업이고 공공기관으로부터 수주를 받는 입장이라면 가산점이 되긴 합니다.) 저는 정보처리기사를 필기만 보고, 실기 준비가 귀찮아서 보지 않았습니다. 그리고 현재까지 이것이 없어서 불이익을 받아본 적이 없습니다. 다만, 정보처리기사의 시험 범위는 컴퓨터 과학의 전반적인 내용입니다. 이것을 공부하는 과정 자체가 개발자 역량을 높이는 데에는 도움이 될 것입니다.
+
+
+CS 관련 강의 출처
+MIT OCW ocw.mit.edu/index.htm
+UDEMY www.udemy.com/ko/
+KOCW www.kocw.net/home/index.do
+COURSERA www.coursera.org
+EDX www.edx.org/
+UDACITY www.udacity.com/
+khan academy ko.khanacademy.org/

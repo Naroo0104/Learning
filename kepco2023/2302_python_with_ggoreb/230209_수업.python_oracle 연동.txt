@@ -1,0 +1,29 @@
+>oracle, python 연결
+
+python -m pip install cx_Oracle --upgrade
+하거나
+python -m pip install --upgrade pip
+
+둘 중에 하나 되면 상관없는데
+안 되면 c++인 visual studio installer를 깔아준다.
+
+
+import cx_Oracle
+
+con = cx_Oracle.connect("madang", "madang", "127.0.0.1:1521", encoding="UTF-8")
+cursor = con.cursor()
+cursor.execute("select * from customer")
+# out_data = cursor.fetchone()
+out_data = cursor.fetchall()
+
+for data in out_data:
+    print(data)
+
+
+# print(out_data)
+con.close()
+
+
+를 입력하면 깔게 된다.
+
+깐 뒤에 '수정'버튼 누르면 다시 뭐가 깔릴 것.

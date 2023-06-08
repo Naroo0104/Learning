@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 회원 정보 목록 :::</title>
+</head>
+<body>
+    <h3>회원 정보 목록</h3>
+    <hr/>
+    <!-- {{cart_list}} -->
+    <table border="1">
+        <tr>
+            <th>회원 아이디</th>
+            <th>회원 비밀번호</th>
+            <th>회원 이름</th>
+            <th>회원 핸드폰번호</th>
+            <th>회원 이메일주소</th>
+        </tr>
+        {% for member in mem_list %}
+        <tr>
+            <td>{{member.mem_id}}</td>
+            <td>{{member.mem_pw}}</td>
+            <td>{{member.mem_name}}</td>
+            <td>{{member.mem_hp}}</td>
+            <td>{{member.mem_mail}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

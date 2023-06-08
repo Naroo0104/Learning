@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: html에서 for문 사용하기 :::</title>
+</head>
+<body>
+    <h3>HTML에서 For문 사용하기</h3>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>패스워드</th>
+        </tr>   
+        {% for dict in lists %}     
+            <tr>
+                <td>{{ dict.id }}</td>
+                <td>{{ dict.pw }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

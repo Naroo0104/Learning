@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 광주 쇼핑몰 :::</title>
+
+    <script type="text/javascript">
+        // 로그인 체크
+        function goLogin(){
+            // alert("호출 잘됨!!");
+            var fm = document.getElementById("fm");
+
+			// 회원 아이디 입력 여부 확인하기
+			if(fm.mem_id.value == ""){
+				alert("아이디를 입력해 주세요");
+				// focus() 해당 입력 박스로 커서를 이동함
+				fm.mem_id.focus();
+				return;
+			}
+			if(fm.mem_pw.value == ""){
+				alert("패스워드를 입력해 주세요");
+				fm.mem_pw.focus();
+				return;
+			}
+
+			alert(fm.mem_id.value);
+			alert(fm.mem_pw.value);
+
+			// 이동할 페이지 정의(즉, 요청페이지 정의)
+			fm.action = "/first/login_chk/";
+			// 전송해주세요...처리
+			fm.submit();
+        }
+    </script>
+</head>
+<!--  -->
+<body>
+    <!-- 제목 -->
+    <h3>{% include 'firstapp/include/top.html' %}</h3>
+    <hr/>
+    <!-- 네비게이션 -->
+    <p>
+        {% include 'firstapp/include/nav.html' %}
+    </p>
+    <hr/>
+    <!-- 페이지 메인 내용 -->
+    <p>
+        <h3>회원 로그인(아이디/패스워드 확인 페이지)</h3>
+        <hr/>
+        
+        아이디 : {{ mem_id }}
+        <br/>
+        패스워드 : {{ mem_pw }}
+    </p>
+    <hr/>
+    <!-- 하단 -->
+    <p>
+        {% include 'firstapp/include/bottom.html' %}
+    </p>
+</body>
+</html>

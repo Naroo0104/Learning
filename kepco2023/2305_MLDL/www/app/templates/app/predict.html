@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+            width: 960px; <!-- 960px이 창 늘어날 때 편리-->
+            font-size: 0.7rem;
+            color: darkgray;
+        }
+
+        input {
+            width:200px;
+            height:15px;
+        }
+
+        img {
+            width:500;
+            height:400;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="/iris/" method="post">
+        {% csrf_token %}
+        <label>붓꽃 잎의 길이</label><input type="text" name="sepal_length"><br/>
+        <label>붓꽃 잎의 넓이</label><input type="text" name="sepal_width"><br/>
+        <label>붓꽃 받침의 길이</label><input type="text" name="petal_length"><br/>
+        <label>붓꽃 받침의 넓이</label><input type="text" name="petal_width"><br/>
+        <input type="submit" name="예측실행" style="font-size:0.7rem">
+    </form>
+    <hr/>
+    <h3>예측결과는</h3>
+    <h4>{{ result }} 이며 해당확률은 {{ prob }} 이다.</h4>
+
+    {% if result == 'setosa' %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Iris_sanguinea.JPG/640px-Iris_sanguinea.JPG">
+    {% elif result == 'versicolor' %}
+        <img src="https://www.picturethisai.com/wiki-image/1080/154253913686540318.jpeg">
+    {% elif result == 'verginica' %}
+        <img src="https://www.gardenia.net/storage/app/public/uploads/images/detail/xUM027N8JI22aQPImPoH3NtIMpXkm89KAIKuvTMB.webp">
+    {% else %}
+        <img src="https://mblogthumb-phinf.pstatic.net/MjAxODAxMTBfMjM4/MDAxNTE1NTE0NjI2NTc4.-b0hzSlI19sWpP7Crr-zTXC9tS5sl7TAv3uBi4aYZzEg.YWU1njr3it8Bo6ks4MckMXDZEdoszh07IyS0t3GgHFYg.GIF.zpdebu65/%EA%BD%9D1_rakoon.gif?type=w800">
+    {% endif %}
+</body>
+</html>

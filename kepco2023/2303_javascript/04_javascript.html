@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 04_javascript :::</title>
+    <script>
+        function goMath(){
+            x=10;
+            y=20;
+            product=x*y;
+            document.getElementById("p1").innerHTML=product
+        }
+    </script>
+</head>
+<body>
+    <h3>자바 스크립트 변수 처리</h3>
+    <p id="p1"></p>
+    <!-- <script type="text/javascript">
+        // 변수 선언 및 정의
+        var x = 10;
+        var y = 20;
+        var sum = x+y;
+        //p 태그의 아이디가 p1인 곳에 위의 sum 값 출력
+        document.getElementById("p1").innerHTML=sum
+    </script> -->
+
+    <!-- 버튼을 클릭하면 아이디가 p1 인 p 태그에 x*y 출력되도록 -->
+    <!-- <button onclick="getElementById('p1').innerHTML=x*y">x 와y 곱하기</button> -->
+    <button onclick="goMath()">곱하기</button>
+</body>
+</html>

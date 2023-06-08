@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    test
+    <hr/>
+
+    contents: 
+    <h1 style='font-size:3em'>{{name}}</h1>
+    <h2 style='font-size:10px'>{{age}}</h2>
+    <hr/>
+
+    <form action="/app/index/" method="get">
+        <input type="text" name="name">
+        <input type="text" name="age">
+        <input type="submit" value="button">
+    </form>
+    <hr/>
+
+    <li>{{name}}</li>
+    <li>{{age}}</li>
+
+</body>
+</html>
+
+<!-- font-size: (em, % → 비율), (px → 크기) -->
+<!-- h1, h2, .. 쓰는 이유: 크롤링할 때 제일 중요한 부분(사이트 대표성) 체크하려고 쓰는 거임 -->

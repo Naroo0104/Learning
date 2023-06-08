@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 06_javascript :::</title>
+    <script type="text/javascript">
+        var x=2;
+        var sum=0;
+        function stack() {
+            sum=sum+x;
+            document.getElementById("p1").innerHTML=sum;
+        }
+    </script>
+</head>
+<body>
+    <h3>매 버튼 클릭 시, 누적</h3>
+    <p id="p1"></p>
+    <button onclick="stack()">누적</button>
+</body>
+</html>

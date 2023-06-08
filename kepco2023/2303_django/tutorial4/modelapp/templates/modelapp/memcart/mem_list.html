@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 회원 정보 목록 :::</title>
+    <script type='text/javascript'>
+        function goView(mem_id) {
+            alert(mem_id);  
+            url = "/model/mem_cart_view/?";
+            url = url + "mem_id="+mem_id
+            //alert(url);
+            location.href = url;     
+        }
+    </script>
+</head>
+<body>
+    <h3>회원 정보 목록</h3>    
+    <hr/>
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>주소1</th>
+        </tr>
+        {% for member in member_list %}
+        <tr>
+            <td>
+                <a href="javascript:goView('{{member.mem_id}}')">
+                    {{ member.mem_id }}
+                </a>
+            </td>
+            <td>{{ member.mem_name }}</td>
+            <td>{{ member.mem_hp }}</td>
+            <td>{{ member.mem_add1 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

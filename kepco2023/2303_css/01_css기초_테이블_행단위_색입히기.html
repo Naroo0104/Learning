@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>::: 01_CSS기초_테이블_행단위_색입히기 :::</title>
+    <style>
+        /* table 스타일 */
+        table {
+            border-collapse: collapse;
+            width:100%;
+
+        }
+        /* th, td 스타일 */
+        th, td {
+            padding:8px;
+            text-align: left;
+            border-bottom:1px solid #ddd;
+        }
+        /* tr 태그에 마우스가 올라갔을 때 스타일 */
+        tr:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>테이블의 행에 마우스 오버 시 색상 입히기</h3>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>최수연</td>
+            <td>서울 종로구</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>이유담</td>
+            <td>서울 서대문구</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>강희성</td>
+            <td>서울 강서구</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>돈까스</td>
+            <td>서울 중구</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::: 12_HTML_태그소개_a링크스타일 :::</title>
+	<style> 
+		a:link {
+			color : green;
+			background-color : transparent;
+			text-decoration : none; 
+		}
+		a:visited {
+			color : pink;
+			background-color : transparent;
+			text-decoration : none;
+		}
+		a:hover 
+		{
+			color : red;
+			background-color : transparent;
+			text-decoration : underline;
+		}
+		a:active 
+		{
+			color : yellow;
+			background-color : transparent;
+			text-decoration : underline;
+		}
+	</style>
+</head>
+<body>
+	<a href="#tip">tip 찾아가기<a>
+	<hr/>
+	<h3>a 링크 태그에 스타일 적용</h3>
+	<a href="http://www.daum.net">Daum</a> |
+	<a href="http://www.naver.com">Naver</a> |
+	<a href="./01_HTML_소개.html">HTML 소개</a>
+	
+	<hr/>
+	<h3>링크 페이지를 열기 위한 target 지정</h3>
+	<a href="http://www.daum.net" target="_blank">
+		Daum</a> |
+	<!--_blank : 새로운 탭에서 열기-->
+	<a href="http://www.naver.com" target="_top">
+		Naver</a> |
+	<!--_top : 현재 창에서 열기-->
+	<a href="./01_HTML_소개.html" target="_self">HTML 소개</a>
+	<!--_self : 동일한 프레임에서 열기(현재 창과 유사)-->
+	
+	<hr/>
+	<h3 id="tip">a 링크를 클릭하면 특정 위치로 이동(책갈피 기능: 페이지 길어졌을 때)</h3>
+	<p></p>
+</body>
+</html>
+
+<!--▲ 웹디자이너들이 일괄적으로 주는 포맷-->
+<!--주석 아무데나 적으면 안 됨ㅡㅅㅜ-->

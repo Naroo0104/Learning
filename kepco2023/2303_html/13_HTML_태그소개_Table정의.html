@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::: 13_HTML_태그소개_Table정의 :::</title>
+	<!--  -->
+	<style>
+		/* table과 td 태그에 대해 스타일 지정 */
+		table {
+			/* border : 테두리 라인 설정 */
+			border : 1px solid black;
+			/* colloapse : 두 줄 테두리를 한 줄 테두리로 스타일 적용 */
+			border-collapse: collapse;
+		}
+
+		/* td에 대해서만 스타일 적용 */
+		td,th {
+			/* 테두리 안쪽 여백주기 :15px로 */
+			padding: 15px;
+			/* 텍스트 중앙 정렬하기 */
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- 행 tr, 열 td, 행 제목 th -->
+	<h3>회원 정보 게시물</h3>
+	<table border="1" width="50%">
+		<tr>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>비밀번호</th>
+		</tr>
+		<tr>
+			<td>a01</td>
+			<td>suyeon</td>
+			<td>pw01</td>
+		</tr>
+		<tr>
+			<td>b01</td>
+			<td>suyeon</td>
+			<td>pw01</td>
+		</tr>
+		<tr>
+			<td>c01</td>
+			<td>suyeon</td>
+			<td>pw01</td>
+		</tr>
+		
+<!-- 여러 개의 열(컬럼, td) 합치기 -->
+		<tr>
+			<td>c01</td>
+			<!-- colspan :
+				-td 합치기
+				-전체 td 개수 중 합치고자 하는 개수 정의 -->
+			<td colspan="2">suyeon</td>
+		</tr>
+		<tr>
+			<td colspan="2">c01</td>
+			<td>pw01</td>
+		</tr>
+		<tr>
+			<td colspan="3">c01</td>
+		</tr>
+<!-- 여러 개의 행(tr) 합치기 -->
+		<tr>
+			<td rowspan="3">a01</td>
+			<td rowspan="3">suyeon</td>
+			<td>pw01</td>
+		</tr>
+		<tr>
+			<!-- <td>b01</td> -->
+			<!-- <td>suyeon</td> -->
+			<td>pw01</td>
+		</tr>
+		<tr>
+			<!-- <td>c01</td> -->
+			<!-- <td>suyeon</td> -->
+			<td>pw01</td>
+		</tr>
+	</table>
+<!-- 테이블 제목(캡션) 달기 -->
+	<hr/>
+	<table boarder="1">
+		<!-- 테이블 제목 -->
+		<caption>테이블 제목<br/>(caption)</caption>
+		<tr>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>주소</th>
+		</tr>
+		<tr>
+			<th>a01</th>
+			<th>최수연</th>
+			<th>광주 광산구 소촌로</th>
+		</tr>
+	</table>
+
+
+</body>
+</html>

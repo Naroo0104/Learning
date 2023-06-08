@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: 수연닷컴 :::</title>
+
+    <script type="text/javascript">
+        function goLogin(){
+            var fm=document.getElementById('fm');
+            if (fm.mem_id.value==""){
+                alert('아이디 입력하세요.');
+                fm.mem_id.focus();
+                return;
+            }
+            if (fm.mem_pw.value==""){
+                alert('비밀번호 입력하세요.');
+                fm.mem_pw.focus();
+                return;
+            }
+
+            alert(fm.mem_id.value);
+            alert(fm.mem_pw.value);
+
+            fm.action="/second/login_chk/"
+            fm.submit();
+
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 제목 -->
+    <h3>{% include 'secondapp/include/top.html' %}</h3>
+    <hr/>
+    <!-- 네비게이션 -->
+    <p>{%include 'secondapp/include/nav.html'%}</p>
+    <hr/>
+
+    <!-- 페이지 메인 내용 -->
+    <p>
+        <form id='fm' name='fm' method='get' action='#'>
+            아이디: <input type="text" name="mem_id" id="mem_id" value="" placeholder="id" required><br/>
+            비밀번호: <input type="password" name="mem_pw" id="mem_pw" placeholder="pw" required>
+            <br/>
+            <button onclick="goLogin()">로그인</button>
+        </form> 
+    </p>
+    <hr/>
+    <!-- 하단 -->
+    <pre>{%include 'secondapp/include/bottom.html'%}</pre>
+</body>
+</html>

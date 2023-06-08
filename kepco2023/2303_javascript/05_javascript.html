@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>::: 05_javascript :::</title>
+    <script type="text/javascript">
+        //1씩 증가되는 함수 만들기
+        //전역변수-페이지가 바뀌지 않는 한 적용 됨
+        var num=0;
+        function plusOne() {
+            num+=1;
+            msg='현재 count : ';
+            document.getElementById("p1").innerHTML=msg+num;
+            
+        }
+    </script>
+</head>
+<body>
+    <h3>버튼 클릭 시 1씩 증가되는 문서 만들기</h3>
+    <p id="p1">▶1씩 증가된 값은 이곳에 출력된다◀</p>
+    <button onclick="plusOne()">1씩 증가</button>
+</body>
+</html>
